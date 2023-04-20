@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#inval{
+    color: red;
+    text-align: center;
+}
+.full-body{
+    height: 100vh;
+  background-color: #f3f4f6;
+  display: flex;
+  align-items: center;
+  height: fixed;
+  justify-content: center;
+}
+.side-text{
+    width: 40%;
+    height: 100vh;
+    color: azure;
+    background-color: black;
+    display: grid;
+    font-style: normal;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    font-weight: 800;
+}
+.side-form{
+    width: 60%;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .full-body{
+        width: 100%;
+        max-width: 100%;
+        display: inline;
+    }
+    .side-text{
+        margin: 0;
+        width: 100%;
+        height: 50px;
+    }
+    .side-form{
+        margin: auto;
+    }
+  }
+  @media (max-width: 576px) {
+    .full-body {
+        width: 100%;
+        max-width: 100%;
+
+    }
+    .side-text{
+        margin: 0;
+        width: 100%;
+        height: 50px;
+    }
+  }

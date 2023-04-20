@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import LoginPage from "./pages/Loginpage";
+import Dash from './Components/Dash'
+import { Routes, Route} from "react-router-dom";
+import Forgot from "./Components/log-uti/Forgot";
+import "./App.css";
+import Dashboard from "./pages/Dashboard";
+import Transaction from "./Components/Transaction";
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Dashboard/>}>
+        <Route path="/" element={<Dash/>}/>
+        <Route path="/dash" element={<Dash/>}/>
+        <Route path="/transaction" element={<Transaction/>}/>
+       </Route>
+      </Routes>
+
+      <Routes>
+        <Route path="/register" element={<LoginPage/>} />
+        <Route path="/login" element={<LoginPage/>} />
+        <Route path="/forgot" element={<Forgot/>}/>
+      </Routes>
+
     </div>
   );
-}
+};
 
 export default App;
